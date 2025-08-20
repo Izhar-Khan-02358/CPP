@@ -3,18 +3,16 @@
 using namespace std;
 
 int main(){
-    int n;
-    cin>>n;
+    int n,k;
+    cin>>n>>k;
     int u=0;
-    string ar[n];
+    int ar[n];
     for(int i=0;i<n;i++){
             cin>>ar[i];
-
-            if(ar[i]=="X++" or ar[i]=="++X"){
+    }
+    for(int i=0;i<n;i++){
+            if(ar[i]>=ar[k-1] && ar[i]>0){
                 u++;
-            }
-            if(ar[i]=="X--" or ar[i]=="--X"){
-                u--;
             }
     }
     cout<<u<<endl;
